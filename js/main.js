@@ -55,10 +55,38 @@ $(document).ready(function () {
     ], {
         loop : true,
         thumbs : {
-        autoStart : true
+            autoStart : true
         }
     });
 
-});
+    });
+    
+    let conutBlocks = document.querySelectorAll(".counter-group");
+
+    for (let i = 0; i < conutBlocks.length; i++) {
+        conutBlocks[i].onclick = function() {
+            let countPlus = this.querySelector('.plus');
+            let countMinus = this.querySelector('.minus');
+            let countInput = this.querySelector('.counter-input');
+
+            countPlus.onclick = function() {
+                countInput.value++;
+            }
+
+            countMinus.onclick = function() {
+                if (countInput.value == 0) return 0;
+                else countInput.value--;
+            }
+        }
+    }
+
+    let moreButton = document.querySelector(".more");
+
+    moreButton.onclick = function(event) {
+        event.preventDefault();
+        $('.hide').css('display', 'block');
+        $('.more').css('display', 'none');
+    }
+
 
 });
