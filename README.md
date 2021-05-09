@@ -9,4 +9,4 @@
 - FancyBox
 - Swiper slider js
 
-# deploy: https://annaignatova.github.io/Flowers/
+### deploy: https://annaignatova.github.io/Flowers/
